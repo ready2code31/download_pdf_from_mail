@@ -39,12 +39,13 @@ def printfileportrait(filename, ghostscript_path, gsprint_path):
 
 def orientationTest(filename):
     pdf = PyPDF2.PdfReader(open(filename, 'rb'))
-    page = pdf.getPage(0).mediaBox
 
-    if page.getUpperRight_x() - page.getUpperLeft_x() > page.getUpperRight_y() - page.getLowerRight_y():
-        return 'Landscape'
+    page = pdf.pages[0].mediabox
+
+    if page.upper_right[0] - page.upper_left[0] > page.upper_right[1] - page.lower_right[1]:
+        return "Landscape"
     else:
-        return 'Portrait'
+        return "Portrait"
 
 
 def printbestorientationchoice(filename, ghostscript_path, gsprint_path):
