@@ -1,0 +1,12 @@
+# mail
+gmail_username=toto@gmail.com
+
+# gmail app password
+gmail_password=toto
+
+# folder where to save pdf
+svdir=C:\Users\user\Desktop\pdf_folder
+
+# folders where to get software to print if you want
+ghostscript=C:\Users\user\Downloads\GHOSTSCRIPT\bin\gswin32.exe
+gsprint=C:\Users\user\Downloads\GSPRINT\gsprint.exe
